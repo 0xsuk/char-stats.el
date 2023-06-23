@@ -3,11 +3,12 @@
 (defvar char-stats--alist '())
 
 (defun char-stats--count-char (n &optional c)
-	(if-let* ((entry (assoc c char-stats--alist))
-						(count (cdr entry)))
-			(setcdr entry (1+ count))
-		(add-to-list 'char-stats--alist (cons c 1))
-		)
+	(when c
+		(if-let* ((entry (assoc c char-stats--alist))
+							(count (cdr entry)))
+				(setcdr entry (1+ count))
+			(add-to-list 'char-stats--alist (cons c 1))
+			))
 	)
 
 (defun char-stats--sort-alist ()
@@ -25,10 +26,12 @@
 	"Print char-stats to buffer."
 	(interactive)
 	(with-current-buffer (get-buffer-create "*char-stats*")
+		(erase-buffer)
 		(cl-loop for entry in (char-stats--sort-alist) do
-						 (let* ((char-code (car entry))
-										(char (char-to-string char-code))
+						 (let ((char (char-to-string (car entry)))
 									 (count (cdr entry)))
-							 (insert (format "%s(ascii:%3d):%5d\n" char char-code count))))))
+							 (insert (format "'%s':%5d times\n" char count)))))
+	(display-buffer "*char-stats*")
+	)
 
 (provide 'char-stats)
