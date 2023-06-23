@@ -1,3 +1,13 @@
+;;; package --- Summary
+
+;; Auther: 0xsuk
+;; Version: 1.0
+;; URL: https://github.com/0xsuk/char-stats.el
+;; Licence: None
+
+;;; Commentary: char stats
+
+;;; Code:
 (require 'cl-lib)
 
 (defvar char-stats--alist '())
@@ -35,3 +45,4 @@
 	)
 
 (provide 'char-stats)
+;;; char-stats.el ends here
