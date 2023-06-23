@@ -1,9 +1,9 @@
 ;;; package --- Summary
 
-;; Auther: 0xsuk
+;; Author: 0xsuk
 ;; Version: 1.0
 ;; URL: https://github.com/0xsuk/char-stats.el
-;; Licence: None
+;; License: None
 
 ;;; Commentary: char stats
 
