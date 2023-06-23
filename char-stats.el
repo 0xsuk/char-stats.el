@@ -1,4 +1,4 @@
-;;; package --- Summary
+;;; char-stats.el --- char stats
 
 ;; Author: 0xsuk
 ;; Version: 1.0
