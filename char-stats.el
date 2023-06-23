@@ -5,7 +5,8 @@
 ;; URL: https://github.com/0xsuk/char-stats.el
 ;; License: None
 
-;;; Commentary: char stats
+;;; Commentary:
+;;; char stats
 
 ;;; Code:
 (require 'cl-lib)
