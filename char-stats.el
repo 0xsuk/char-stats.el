@@ -3,7 +3,6 @@
 ;; Author: 0xsuk
 ;; Version: 1.0
 ;; URL: https://github.com/0xsuk/char-stats.el
-;; License: None
 
 ;;; Commentary:
 ;;; char stats
